@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import Footer from './Footer';
+import Header from './Header';
 const Blacklist = () => {
   const [blacklist, setBlacklist] = useState([
     { id: 1, name: 'John Doe', idCard: '123456789', number: '987654321', reason: 'Fraud', account: '123-456-789' },
@@ -38,7 +39,8 @@ const Blacklist = () => {
     handleSaveClick();
   };
 
-  return (
+  return (<div>
+     <Header />
     <div className="blacklist-container">
       <h1 className="header">Blacklist Management</h1>
 
@@ -137,6 +139,8 @@ const Blacklist = () => {
           </button>
         </div>
       </div>
+    </div>
+
     </div>
   );
 };

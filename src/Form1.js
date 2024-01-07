@@ -32,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'reg',
     textAlign: 'center',
     '& .MuiStepIcon-root.MuiStepIcon-active': {
-      color: theme.palette.primary.main,
+      color: 'rgb(46, 14, 88)',
     },
     '& .MuiStepIcon-root.MuiStepIcon-completed': {
-      color: theme.palette.primary.main,
+      color:  'rgb(46, 14, 88)',
     },
   },
   button: {
@@ -46,10 +46,11 @@ const useStyles = makeStyles((theme) => ({
     padding: '6px 3rem',
     letterSpacing: '1px',
     fontWeight: '900',
-    backgroundColor: theme.palette.primary.main,
-    color: '#fff',
+    backgroundColor: 'rgb(226, 215, 240)', // Background color
+    color: 'rgb(46, 14, 88)', // Text color
     '&:hover': {
       backgroundColor: '#6c3483', // Darker shade of violet on hover
+      color: '#fff', // Text color on hover
     },
   },
 }));
@@ -71,15 +72,15 @@ const Form1 = () => {
     switch (stepIndex) {
       case 0:
         return <Transaction />;
-      case 1:
-        return <div><img src={logo} /></div>;
+        case 1:
+        return <Transfert />;
       case 2:
-        return <div><img src={logo} /></div>;
-      case 3:
-        return <div><img src={logo} /></div>;
-      default:
-        return <div><img src={logo} /></div>;
-    }
+        return <Transfert1 />;
+        case 4:
+          return <Check />;
+          default:
+          return ' ';
+      }
   }
 
   const classes = useStyles();

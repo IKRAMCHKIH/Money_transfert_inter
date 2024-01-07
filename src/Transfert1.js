@@ -15,7 +15,7 @@ import { ottp } from './Service';
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     padding: '1rem', // Adjusted padding for a smaller card
-    backgroundColor: 'rgb(226, 215, 240)',
+    backgroundColor: 'rgb(255, 255, 255)',
     
     border: '1px solid rgb(46, 14, 88)',
 
@@ -147,7 +147,7 @@ const Transfert1 = () => {
             </Button>
           </Grid>
           <Grid item xs={4} style={{ textAlign: 'center' }}>
-            <div>____________________________________________</div>
+            <div>________________</div>
             <FormHelperText style={{ textAlign: 'center' }}>{helperText}</FormHelperText>
             <FormHelperText style={{ textAlign: 'center' }}>{helperText1}</FormHelperText>
             <div className={classes.totalText}>Total = {total}</div>

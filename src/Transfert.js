@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   mainContainer: {
     padding: '1rem', // Adjusted padding for a smaller card
      border: '1px solid rgb(46, 14, 88)',
-     backgroundColor: 'rgb(226, 215, 240)',
+     backgroundColor: 'rgb(255, 255, 255)',
 
 
   }

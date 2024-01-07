@@ -19,9 +19,10 @@ import Header from './Header';
 
 const Transaction = () => {
   return( <div>
-      <Typography variant='h5' style={{color: "#999", textAlign:"center", marginTop:"1rem"}}>
+      <Typography variant="h5" style={{ color: "rgb(46, 14, 88)", textAlign: "center", margin: "3rem", fontWeight: "bold" }}>
       Accès à la transaction 
-      </Typography>
+</Typography>
+
       
      
 

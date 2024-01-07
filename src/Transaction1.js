@@ -41,12 +41,18 @@ const useStyles = makeStyles({
     },
   },
   tableContainer: {
-    backgroundColor: 'rgb(226, 215, 240)',
-    border: '1px solid rgb(46, 14, 88)', // Ajout de la bordure
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  // Adjusted padding for centering
+    borderRadius: '10px', // Add border-radius for a rounded appearance
+ 
   },
   table: {
-    width: '100%',
-    border: '1px solid rgb(46, 14, 88)', // Ajout de la bordure
+    width: '100%', // Adjusted width for a more centered look
+    margin: 'auto', // Added margin auto for centering
+    border: '1px solid rgb(46, 14, 88)',
+    borderRadius: '5px', // Add border-radius for a rounded appearance
   },
   tableHead: {
     backgroundColor: 'rgb(46, 14, 88)',
@@ -105,22 +111,27 @@ const Transaction1 = () => {
 
   return (
     <div>
-      <Typography variant='h5' style={{ color: "#999", textAlign: "center", marginTop: "1rem" }}>
-        Accès à la transaction
-      </Typography>
-      <form style={{ textAlign: "center", margin: "3rem" }} className={classes.root}>
-        <TextField
-          fullWidth
-          style={{ width: "16rem", textAlign: "center" }}
-          label="Carte ID"
-          onChange={(e) => setCin(e.target.value)}
-          type="text"
-          variant="standard"
-        />
-        <Button onClick={searchC} className={classes.root}>
-          <img className="search" src={searchh} />
-        </Button>
-      </form>
+     
+      <Typography variant="h3" style={{ color: "rgb(46, 14, 88)", textAlign: "center", margin: "3rem", fontWeight: "bold" }}>
+      Accès à la transaction 
+</Typography>
+<form style={{ textAlign: "center", margin: "3rem", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", padding: "1.5rem" }} className={classes.root}>
+  <TextField
+    fullWidth
+    style={{ width: "16rem", textAlign: "center" }}
+    label="Carte ID"
+    onChange={(e) => setCin(e.target.value)}
+    type="text"
+    variant="outlined"
+  />
+  <Button onClick={searchC} className={classes.root} style={{ backgroundColor: "rgb(255,255,255)", color: "white", marginTop: "1rem" }}>
+    <img className="search" src={searchh} style={{ color: "rgb(46, 14, 88)" }} />
+  </Button>
+</form>
+
+
+
+
       <Typography variant="h5" style={{ color: "rgb(46, 14, 88)", textAlign: "center", margin: "3rem", fontWeight: "bold" }}>
   Les Données du Client Donneur
 </Typography>
@@ -136,9 +147,7 @@ const Transaction1 = () => {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell component="th" scope="row">
-                {client.firstName}
-              </TableCell>
+              <TableCell align="left"> {client.firstName}</TableCell>
               <TableCell align="left">{client.lastName}</TableCell>
               <TableCell align="left">{client.phoneNumber}</TableCell>
               <TableCell align="left">{client.idCard}</TableCell>

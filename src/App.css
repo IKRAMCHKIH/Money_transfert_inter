@@ -5,7 +5,6 @@
   z-index: 10;
   top: 0;
   left: 0;
-
   background: transparent;
 }
 .header {
@@ -24,7 +23,7 @@
 }
 /* .heroL{
  
-  
+
   justify-content: center;
   align-items: center;
 } */
@@ -63,30 +62,18 @@
 .logo {
   
   width: 2rem;
-  
- 
   z-index: 10;
 }
 .logoH {
   margin-top: 4rem;
   width: 6rem;
-  
- 
- 
 }
 .log{
-  
   width: 4.3rem;
   margin: 0 5px;
-  
-  
- 
- 
 }
 .no-border{
-  border-bottom: 2px solid #8a8a8a;
- 
-  
+  border-bottom: 2px solid #8a8a8a; 
 }
 /* .nav {
   justify-content: space-between;
@@ -200,11 +187,11 @@
   
   text-transform: uppercase;
   
-  color: #5fe0a2;
+  color: rgb(226, 215, 240);
   font-weight: 900;
   position: relative;
   
-  border: 1px solid #5fe0a2;
+  border: 1px solid rgb(226, 215, 240);
   margin-top: 34px;
   padding: 13px 1rem;
   
@@ -418,11 +405,12 @@
   color: rgb(46, 14, 88); /* Dark text color for the heading */
   margin-bottom: 16px; /* Space below the heading */
   padding-bottom: 16px; /* Padding below the heading */
-  border-bottom: 2px solid rgb(46, 14, 88); /* Light grey bottom border */
+
   text-align: center; /* Center-align the text */
   max-width: 1000px; /* Maximum width */
   margin:auto; /* Center align the container */
   padding: 20px; /* Padding around the content */
+  text-decoration: none;
   }
   .form {
     max-width: 330px;
@@ -455,6 +443,7 @@
 
 
 /* Styles for the paragraph */
+
 #about p {
   color: #333; /* Darker grey for better readability */
   font-size: 18px; /* Larger font size */
@@ -465,8 +454,9 @@
   padding: 20px; /* More padding around the text */
   background-color: #f9f9f9; /* Light background color for the text area */
 }
+
 .Button {
-  background-color: #0056b3; /* Primary button color */
+  background-color: rgb(46, 14, 88); /* Primary button color */
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -476,7 +466,7 @@
 }
 
 .Button:hover {
-  background-color: #003d82; /* Darker shade on hover */
+  background-color: rgb(226, 215, 240); /* Darker shade on hover */
 }
 .headline, .headline1, .title, #about h1 {
   color: rgb(46, 14, 88);
@@ -496,11 +486,10 @@
  /* App.css */
 
 .blacklist-container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+ 
 }
 
 .header {
@@ -525,9 +514,13 @@ th, td {
 }
 
 th {
+
   color: rgb(46, 14, 88);
   background-color: rgb(226, 215, 240);
+
+
 }
+
 
 .input-edit {
   width: 80%;

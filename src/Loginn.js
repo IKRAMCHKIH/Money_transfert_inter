@@ -80,7 +80,7 @@ const Loginn = (props)=> {
                            
                 
         console.log(response);
-        history("/")
+        history("/home")
 
     })
     .catch(function (response) {
@@ -159,7 +159,7 @@ const Loginn = (props)=> {
       ) : null}
       <Input
         id={id}
-        onChange={handleChange}
+        onChange={(e)=>setEmail(e.target.value)}
         type={type}
         {...inputProps}
       />
@@ -185,13 +185,13 @@ const Loginn = (props)=> {
           underline: underlineClasses
         }}
         id={id}
-        onChange={handleChange}
+        onChange={(e)=>setPassword(e.target.value)}
         {...inputProps}
         type={type}
       />
     </FormControl>
 
-    <Button type="button" color="#fff" className="form__custom-button">
+    <Button type="button" color="#fff" className="form__custom-button" onClick={loginm} >
       Log in
     </Button>
   </form>

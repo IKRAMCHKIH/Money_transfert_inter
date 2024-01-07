@@ -2,8 +2,11 @@ import axios from "axios"
 
 
 
-const end_point1 = "https://agent-microserv.herokuapp.com/api_agent/";
-const end_point2 = "https://backoffice-microserv.herokuapp.com/api_backoffice/";
+// const end_point1 = "https://agent-microserv.herokuapp.com/api_agent/";
+// const end_point2 = "https://backoffice-microserv.herokuapp.com/api_backoffice/";
+
+const end_point1 = "http://localhost:8081/api_agent/";
+const end_point2 = "http://localhost:8083/api_backoffice/";
 
 
 axios.interceptors.request.use(

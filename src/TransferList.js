@@ -1,17 +1,14 @@
 import React,{useEffect,useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import IntlTelInput from "react-intl-tel-input"
-
+import SearchIcon from '@material-ui/icons/Search';
 import "react-intl-tel-input/dist/main.css"
 import SearchBar from "material-ui-search-bar";
 import {transferList} from './Service';
 import {getTransfer} from './Service';
 import { useParams,useNavigate} from 'react-router-dom';
 import searchh from './images/searchh.png'
-
-
-
-
+import Footer from './Footer'
 import {
     Typography,
     Button,
@@ -32,40 +29,9 @@ const TransferList = () => {
   
 
   const useStyles = makeStyles({
-    root : {
-         
-         "& .MuiFormLabel-root.Mui-focused": {
-             color : "#5fe0a2"
-         },
-         "& .MuiInput-underline.Mui-focused:after": {
-            borderBottom : "2px solid #5fe0a2",
-            color : "#5fe0a2"
-        },
-        "& .MuiInput-underline.Mui-focused:before": {
-            borderBottom : "2px solid #5fe0a2",
-            color : "#5fe0a2"
-        },
-        color : "#5fe0a2",
-       
-        fontWeight:"900"
-         
-        
-        
+    
 
-
-    },
-    roo1 : {
-         
-        
-        color : "#ff6961",
-        
-        fontWeight:"900"
-         
-        
-        
-
-
-    }
+  
 })
   
   
@@ -114,8 +80,6 @@ const TransferList = () => {
     transferList().then(function (response){
             
       
-
-
       setList(response.data)
 console.log("list",list);
 })
@@ -140,13 +104,16 @@ console.log(response)
   
   const classes = useStyles();
 
-  return( <div>
+  return( 
+  <div>
     <Header />
+    <br/>
+    <br/>
     <form style={{ textAlign:"center" ,margin:"1rem auto 0"}} className={classes.root}>
 
-    <TextField fullWidth style={{width:"16rem",margin:"0 1rem", textAlign:"center"}} label="" helperText="Reference du Transfert" type="text" onChange={e => setSearch(e.target.value)} variant="standard"  />
+    <TextField fullWidth style={{width:"16rem",margin:"0 1rem", textAlign:"right"}} label="ref"  type="text" onChange={e => setSearch(e.target.value)} variant="standard"  />
     <Button  onClick={searchRef} className={classes.root}>
-    <img  className="search"src={searchh}/>
+    <SearchIcon  className="search" src={searchh} />
           </Button>
     </form>
     <div  style={{width : "95%",
@@ -154,13 +121,14 @@ console.log(response)
          border : "1px solid #fff",
          fontFamily : "reg",
          textAlign:"center"}}>
-      <Typography variant='h5' style={{color: "#999", textAlign:"left", margin:"3rem"}}>
+      <Typography variant='h5' style={{color: "#rgb(46, 14, 88)", textAlign:"left", margin:"3rem"}}>
       Listes des Transferts
       </Typography>
      <TableContainer component={Paper} >
     <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      
         <TableHead>
-          <TableRow>
+          <TableRow className={classes.tableHead} >
             
             <TableCell align="left">Date de création</TableCell>
             <TableCell align="left">Donneur</TableCell>
@@ -179,7 +147,7 @@ console.log(response)
           
             {list.map(li => (
                <TableRow>
-               <TableCell component="th" scope="row" >
+               <TableCell component="th1" scope="row"  >
                {li.created_at}
                 </TableCell>
                 <TableCell align="left"> {li.sender_fname} </TableCell>
@@ -193,7 +161,6 @@ console.log(response)
                 <TableCell align="left" >{li.transfers.map(lii =>
                 <label  style={{fontSize:"12px"}} className={color(lii.transfer_status)}><div>{getStepsContent (lii.transfer_status)}<br></br></div></label>)}</TableCell></TableRow>
             )
-           
               )}
             
             
@@ -204,14 +171,14 @@ console.log(response)
             </TableBody>
         
         
-        </Table></TableContainer><Button style={{fontSize:"12px",letterSpacing:"1px",color:"#8a8a8a",fontFamily:"reg",fontWeight:"900",margin:"1rem 0 0",textTransform:"lowercase"}}>
+        </Table></TableContainer><Button style={{fontSize:"12px",letterSpacing:"1px",color:"#rgb(46, 14, 88)",fontFamily:"reg",fontWeight:"900",margin:"1rem 0 0",textTransform:"lowercase"}}>
             
           </Button></div>
         
         
-        
-        
       </div>
+
+
   )}
 
 export default TransferList;

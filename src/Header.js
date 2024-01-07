@@ -1,6 +1,8 @@
 import React, { Component, useState, useEffect,useCallback } from 'react'
 
-import logo from './logo.svg'; // Import the logo
+
+import logo from './images/logo.webp'; // Import the logo
+
 
 import { useHistory } from "react-router-dom"
 
@@ -42,14 +44,14 @@ const Header = () => {
             EasyMT
           </Link>
         <div className="navlinks" style={{font:'aria'}}>
-          <Link to="/" className="link">
+          <Link to="/home" className="link">
           <HomeRoundedIcon style={{ marginRight: '5px' }} /> Home 
           </Link>
-          <Link to="/about" className="link">
-          <InfoRoundedIcon style={{ marginRight: '5px' }}/> About
+          <Link to="/blacklist" className="link">
+          <InfoRoundedIcon style={{ marginRight: '5px' }}/> Liste Noire 
           </Link>
 
-          <Link to="/faq" className="link">
+          <Link to="/transferList" className="link">
             <HistoryRoundedIcon style={{ marginRight: '5px' }}/> Historique
           </Link>
         </div>

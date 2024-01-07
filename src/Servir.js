@@ -232,7 +232,7 @@ console.log(list)
          border : "1px solid #fff",
          fontFamily : "reg",
          textAlign:"center"}}>
-      <Typography variant='h5' style={{color: "#999", textAlign:"left", margin:"3rem"}}>
+      <Typography variant='h6' style={{color: "rgb(46, 14, 88)", textAlign:"left", margin:"3rem"}}>
       Details du Transfert ({reference})
       </Typography>
      <TableContainer component={Paper} >
@@ -241,32 +241,32 @@ console.log(list)
         <TableBody sx={{ maxWidth: 200 }} >
         
         <TableRow>
-             <TableCell component="th" scope="row" >
+             <TableCell component="th1" scope="row" >
                Prénom
                </TableCell>
               <TableCell align="left">{list.sender_fname}</TableCell>
               </TableRow>
           <TableRow>
-             <TableCell component="th" scope="row" >
+             <TableCell component="th1" scope="row" >
                Nom
                </TableCell>
               <TableCell align="left">{list.sender_lname}</TableCell>
               </TableRow>
           <TableRow>
-             <TableCell component="th" scope="row" >
+             <TableCell component="th1" scope="row" >
                Date d'émission
                </TableCell>
               <TableCell align="left">{list.created_at}</TableCell>
               </TableRow>
           <TableRow>
-             <TableCell component="th" scope="row" >
+             <TableCell component="th1" scope="row" >
                GSM
                </TableCell>
               <TableCell align="left">{list.sender_phnumber}</TableCell>
               </TableRow>
           
           <TableRow>
-             <TableCell component="th" scope="row" >
+             <TableCell component="th1" scope="row" >
                Motif
                </TableCell>
               <TableCell align="left">{list.transfers!==undefined
@@ -275,31 +275,14 @@ console.log(list)
                   :<></>
               }</TableCell>
               </TableRow>
-           
-        
-            
-            </TableBody>
-        
-        
-        </Table></TableContainer>
-        
-      <Typography variant='h5' style={{color: "#999", textAlign:"left", margin:"3rem"}}>
-     L'operation du Transfert
-      </Typography>
-     <TableContainer component={Paper} >
-    <Table sx={{ width: 200 }}  aria-label="simple table">
-        
-        <TableBody sx={{ maxWidth: 200 }} >
-        
-          
-          <TableRow>
-             <TableCell component="th" scope="row" >
+              <TableRow>
+             <TableCell component="th1" scope="row" >
                Montant du transfert avec frais
                </TableCell>
               <TableCell align="left">{list.total_expense_amount} dhs</TableCell>
               </TableRow>
           <TableRow>
-             <TableCell component="th" scope="row" >
+             <TableCell component="th1" scope="row" >
                Status
                </TableCell>
          
@@ -311,16 +294,14 @@ console.log(list)
           }
           </h2></TableCell>
               </TableRow>
-              
-          
-          
-           
         
             
             </TableBody>
         
         
         </Table></TableContainer>
+        
+     
         <>
      <h2 >{list.transfers!==undefined
               ?

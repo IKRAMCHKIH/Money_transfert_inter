@@ -23,9 +23,9 @@ function App() {
         <Route path="/formA" element={<Form />} />
         <Route path="/formB" element={<Form1 />} />
 
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/backOffice" element={<HomeB />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/loginn" element={<Login1 />} />
         <Route path="/loginb" element={<Login2 />} />
         <Route path="/transferList" element={<TransferList />} />

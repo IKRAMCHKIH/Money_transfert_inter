@@ -542,7 +542,7 @@ button {
 }
 
 button:hover {
-  background-color: #4a148c;
+  background-color:  rgb(226, 215, 240);
 }
 /* Ajoutez ces styles à votre fichier App.css ou à un fichier dédié */
 

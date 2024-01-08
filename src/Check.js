@@ -61,8 +61,12 @@ function Check({ donneurData, beneficiaires, montantTransaction }) {
         <Typography variant="h6" component="h3" style={{ color: '#2e0e58' }}>
           Montants
         </Typography>
-        <p>Montant du transfert: {donneurData.total_amount}</p>
-        <p>Frais: 10</p>
+        {beneficiaires.map((beneficiaire, index) => (
+          <div key={index}>
+            <p>Montant : {beneficiaire.transfer_amount} DHS </p>
+            <p>Frais: 10 DHS</p>
+          </div>
+        ))}vs
       </Paper>
       <div>
         <Checkbox

@@ -54,7 +54,7 @@ function Home() {
        <br/>
       <div className="cards-container">
        
-      <Card className="oho" component={Link} to="/form1">
+      <Card className="oho" component={Link} to="/formA">
       <CardActionArea>
         <CardMedia
           component="img"
@@ -74,7 +74,7 @@ function Home() {
      
     </Card>
    
-    <Card className="oho" component={Link} to="/form2" style={{color:"rgb(46, 14, 88)"}} >
+    <Card className="oho" component={Link} to="/formB" style={{color:"rgb(46, 14, 88)"}} >
       <CardActionArea>
         <CardMedia
           component="img"
